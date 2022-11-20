@@ -18,13 +18,9 @@ argr18 := c.DefaultQuery("r18", "false") // 获取r18参数,默认为false
 可以携带的访问参数: tag&num&r18
 
 tag默认空, num默认1, r18默认false
-```golang
-keyword := c.DefaultQuery("tag", "")     // 获取tag参数,默认为空
-argum := c.DefaultQuery("num", "1")      // 获取num参数,默认为1
-argr18 := c.DefaultQuery("r18", "false") // 获取r18参数,默认为false
-```
+
 如果你想要白丝10张r18, 你应该这样访问:
-> host:port/setu?num=10&tag=白丝&r18=true
+>> host:port/setu?num=10&tag=白丝&r18=true
 
 
 ## 响应内容中每份setu的返回内容
@@ -119,3 +115,5 @@ type SetuList struct {
     ]
 }
 ```
+
+## 数据库在database文件夹里面
