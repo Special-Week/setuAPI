@@ -1,4 +1,4 @@
-# 使用Golang[Gin](https://gin-gonic.com/zh-cn/)框架搭建一个简易的setuAPI
+# 使用Golang的[Gin](https://gin-gonic.com/zh-cn/)框架搭建一个简易的setuAPI
 
 
 使用的第三方库:
