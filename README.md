@@ -1,18 +1,28 @@
 # 使用Golang的[Gin](https://gin-gonic.com/zh-cn/)框架搭建一个简易的setuAPI
 
 
-使用的第三方库:
+## 使用的第三方库
   
     gin         go get -u github.com/gin-gonic/gin
     sqlite3     go get -u github.com/mattn/go-sqlite3
     
-设置路由以及端口部分, 当然想改可以任意
+## 设置路由以及端口部分, 当然想改可以任意
 ```golang
 r.GET("/setu", setuApi) // 设置路由
 r.Run(":23856")         // 端口
 ```
+可以携带的访问参数: tag&num&r18
+tag默认空, num默认1, r18默认false
+```golang
+keyword := c.DefaultQuery("tag", "")     // 获取tag参数,默认为空
+argum := c.DefaultQuery("num", "1")      // 获取num参数,默认为1
+argr18 := c.DefaultQuery("r18", "false") // 获取r18参数,默认为false
+```
+如果你想要白丝10张r18, 你应该这样访问:
+> host:port/setu?num=10&tag=白丝&r18=true
 
-响应内容中每份setu的返回内容
+
+## 响应内容中每份setu的返回内容
 ```golang
 type Setu struct {
 	Pid    int      `json:"pid"`
@@ -28,7 +38,7 @@ type Setu struct {
 ```
 
 
-api的返回内容
+## api的返回内容
 ```golang
 type SetuList struct {
 	Code    int    `json:"code"`
@@ -39,7 +49,7 @@ type SetuList struct {
 
 
 
-实例:
+## 实例
 ```json
 {
     "code": 200,
