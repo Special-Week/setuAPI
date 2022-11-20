@@ -18,6 +18,7 @@ type SetuList struct {
 	Data    []Setu `json:"data"`
 }
 
+// 构造函数
 func NewSetu(pid int, p int, uid int, title string, author string, r18 bool, tags []string, ext string, urls string) Setu {
 	return Setu{
 		Pid:    pid,
@@ -32,6 +33,7 @@ func NewSetu(pid int, p int, uid int, title string, author string, r18 bool, tag
 	}
 }
 
+// 构造函数
 func NewSetuList(code int, message string, data []Setu) SetuList {
 	return SetuList{
 		Code:    code,
