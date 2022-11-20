@@ -21,6 +21,7 @@ tag默认空, num默认1, r18默认false
 
 如果你想要白丝10张r18, 你应该这样访问:
 > host:port/setu?num=10&tag=白丝&r18=true
+
 顺序无所谓
 
 
